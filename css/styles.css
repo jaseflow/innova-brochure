@@ -214,6 +214,7 @@ small {
     border: 0;
     text-align: center;
     box-shadow: 0 0.08695652174em 0.1304347826em 0 rgba(0,0,0,0.50); /* 0 2/23 3/23 */
+    font-weight: 400;
     border-radius: 0.1739130435em; /* 4/23 */
     color: #fff;
     text-transform: uppercase;
@@ -346,7 +347,10 @@ small {
     top: 25%;
 }
 
-.signup {
+.section.signup {
+    display: flex;
+    height: calc(100vh - 70px);
+    align-items: center;
 	background: #f9f9f9;
 }
 
@@ -447,6 +451,11 @@ small {
     color: #fff;
 }
 
+.info__icon i {
+	font-size: 32px;
+    line-height: 72px;
+}
+
 .footer {
 	padding: 20px 0;
 }
@@ -512,3 +521,4 @@ small {
     height: 20px;
     border: 1px dashed #999;
 }
+
