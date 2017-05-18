@@ -481,7 +481,7 @@ small {
     border-radius: 50%;
     margin-bottom: 0.625em;
     color: var(--primaryBlue);
-    border: 0.0625em solid;
+    border: 1px solid;
 }
 
 .info__icon i {
@@ -535,4 +535,22 @@ small {
         font-size: 16px;
     }
 
+}
+
+@media(max-width: 64em) {
+
+    .info-grid {
+        display: block;
+        white-space: nowrap;
+        overflow: auto;
+        margin-right: -1.25em;
+        margin-left: -1.25em;
+    }
+
+    .info-grid .grid__item {
+        white-space: normal;
+        display: inline-block;
+        width: 75%;
+        padding-left: 1.25em;
+    }
 }
