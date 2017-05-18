@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>InnovaReviews</title>
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/innova.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
@@ -12,9 +12,9 @@
 <body>
     <section class="hero">
         <header class="header flex flex--aligned" id="header">
-            <div class="container flex flex--aligned flex--spaced flex__full">
+            <div class="container flex flex--aligned flex--spaced flex__full header__container">
                 <a href="#" class="logo">InnovaReviews</a>
-                <div class="flex flex--aligned">
+                <div class="flex flex--aligned header__nav">
                     <nav class="hidden-mobile flex nav">
                         <a href="#about" class="nav__link">About</a>
                         <a href="#pricing" class="nav__link">Pricing</a>
@@ -268,11 +268,17 @@
         });
     </script>
     <script>
+        var signUpBox = document.querySelector("#signup");
         window.addEventListener("scroll", function(event) {
             if(window.scrollY >= 500) {
                 document.querySelector("body").classList.add("header-stuck");
             } else {
                 document.querySelector("body").classList.remove("header-stuck");
+            }
+            if(signUpBox.getBoundingClientRect().top <= 250) {
+                document.querySelector("body").classList.add("signing-up");
+            } else {
+                document.querySelector("body").classList.remove("signing-up");
             }
         });
     </script>

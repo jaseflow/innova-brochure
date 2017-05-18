@@ -296,6 +296,28 @@ small {
     animation: showHeader 375ms ease forwards;
 }
 
+.header__container {
+	position: relative;
+    overflow: hidden;
+    padding-bottom: 2px;
+}
+
+.header__nav {
+    transition: all 375ms ease;
+}
+
+.signing-up.header-stuck .signup-button {
+    transition: all 150ms ease;
+}
+
+.signing-up .header__nav {
+    transform: translateX(155px);
+}
+
+.signing-up .signup-button {
+	opacity: 0;
+}
+
 .hero,
 .pricing {
 	color: #fff;
