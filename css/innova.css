@@ -1,0 +1,127 @@
+@keyframes showBg {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+
+.innova-bg {
+	z-index: 998;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    display: none;
+    opacity: 0;
+    transition: all 500ms ease;
+    animation: showBg 200ms ease forwards;
+}
+
+.innova-open {
+	height: 100%;
+    overflow: hidden;
+}
+
+.innova-open .innova-bg {
+	display: block;
+}
+
+.innova {
+	position: fixed;
+    top: calc(100% - 50px);
+    width: 260px;
+    right: 40px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+    transition: all 375ms ease;
+    z-index: 999;
+}
+
+.innova-open .innova {
+	width: 500px;
+    transform: translateY(-500px);
+}
+
+.innova__header {
+	height: 50px;
+    line-height: 50px;
+    background: #4AC67C;
+    padding: 0 20px;
+    border-radius: 4px 4px 0 0;
+    transition: all 375ms ease;
+    cursor: pointer;
+}
+
+.innova__closed-copy {
+	display: flex;
+    align-items: center;
+}
+
+.innova__opened-copy {
+	display: none;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.innova-open .innova__closed-copy { display: none; }
+.innova-open .innova__opened-copy { display: flex; }
+
+.innova__close {
+	font-size: 18px;
+    color: #fff;
+}
+
+.innova__header:hover {
+    background: #3cb76d;
+}
+
+.innova__header h2 {
+    font-size: 16px !important;
+	color: #fff !important;
+    margin: 0 !important;
+}
+
+.innova__stars {
+    padding-right: 20px !important;
+	color: #FEC939;
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(0.75);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.innova__stars i {
+	width: 15px;
+    text-align: center;
+    display: inline-block;
+    animation: popIn 375ms ease forwards;
+    opacity: 0;
+}
+
+.innova__stars i:nth-child(1) { animation-delay: 100ms }
+.innova__stars i:nth-child(2) { animation-delay: 200ms }
+.innova__stars i:nth-child(3) { animation-delay: 300ms }
+.innova__stars i:nth-child(4) { animation-delay: 400ms }
+.innova__stars i:nth-child(5) { animation-delay: 500ms }
+
+.innova__body {
+	height: 500px;
+    background: #fff;
+    padding: 20px;
+}
