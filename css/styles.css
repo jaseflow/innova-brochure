@@ -449,6 +449,7 @@ small {
     border-radius: 50%;
     margin-bottom: 10px;
     color: #fff;
+    background: var(--secondaryBlue);
 }
 
 .info__icon i {
