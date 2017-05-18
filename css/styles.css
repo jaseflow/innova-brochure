@@ -301,10 +301,6 @@ small {
 	color: #fff;
 }
 
-.about {
-	padding-top: 18.75em; /* 300/16 */
-}
-
 .hero {
 	padding-top: 4.375em; /* 70/16 */
 	padding-bottom: 4.375em; /* 70/16 */
@@ -400,6 +396,10 @@ small {
     margin: 0 auto;
     max-width: 50em;
 	margin-bottom: 2.5em;
+}
+
+.about {
+	padding-top: 0;
 }
 
 .logo {
