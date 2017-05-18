@@ -1,3 +1,9 @@
+@media(max-width: 768px) {
+    .innova {
+        display: none;
+    }
+}
+
 @keyframes showBg {
     from {
         opacity: 0;

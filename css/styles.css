@@ -24,7 +24,7 @@ body {
 	color: #636363;
     font-family: "Lato", sans-serif;
     line-height: 1.5;
-    font-size: 100%;
+    font-size: 14px;
     font-weight: 300;
 }
 
@@ -56,31 +56,39 @@ body {
 	flex-direction: column;
 }
 
-.grid {
-	display: flex;
-    flex-wrap: wrap;
-    margin-left: -20px;
-}
+@media(min-width: 48em) {
 
-.grid__item {
-	padding-left: 20px;
-}
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -1.25em;
+    }
 
-.grid__item--half {
-	width: 50%;
-}
+    .grid__item {
+        padding-left: 1.25em;
+    }
 
-.grid__item--third {
-    width: 33.333333333%;
-}
+    .grid__item--half {
+        width: 50%;
+    }
 
-.grid__item--fourth {
-    width: 25%;
+    .grid__item--third {
+        width: 33.333333333%;
+    }
+
+    .grid__item--fourth {
+        width: 25%;
+    }
+
 }
 
 /* /////// */
 /* Utility */
 /* /////// */
+
+.hidden-mobile {
+	display: none !important;
+}
 
 .text-centered {
 	text-align: center;
@@ -124,7 +132,7 @@ body {
 
 form {
     width: 100%;
-	max-width: 400px;
+	max-width: 25em; /* 400/16 */
 }
 
 label {
@@ -135,11 +143,12 @@ label {
 }
 
 .input {
-	height: 44px;
-    padding: 0 20px;
-    border: 1px solid #999;
+	height: 2.75em; /* 44/16 */
+    font-size: 1em;
+    padding: 0 1.25em;
+    border: 0.0625em solid #999;
     color: #666;
-    border-radius: 4px;
+    border-radius: 0.25em; /* 4/16 */
     width: 100%;
     outline: none;
     transition: border 0.25s ease;
@@ -150,7 +159,7 @@ label {
 }
 
 .form__group {
-	margin-bottom: 20px;
+	margin-bottom: 1.25em;
 }
 
 /* //// */
@@ -175,15 +184,15 @@ h3,
 h4,
 p,
 ul {
-    margin-bottom: 12px;
+    margin-bottom: 0.625em;
 }
 
 .huge {
-	font-size: 80px;
+	font-size: 5em;
 }
 
 .large {
-	font-size: 40px;
+	font-size: 2.5em;
 }
 
 h1 {
@@ -207,6 +216,13 @@ small {
 	font-size: 0.875em;
 }
 
+/* TODO: Clean this up */
+.signup-button {
+    display: none;
+	border: 0.07142857143em solid rgba(255,255,255,0.25); /* 1/14 */
+    border-radius: 0.2857142857em;
+}
+
 .btn,
 .header-stuck .signup-button {
 	display: inline-block;
@@ -218,8 +234,8 @@ small {
     border-radius: 0.1739130435em; /* 4/23 */
     color: #fff;
     text-transform: uppercase;
-    height: 66px;
-    line-height: 66px;
+    height: 2.8695652174em; /* 66/23 */
+    line-height: 2.8695652174em;
     padding: 0 1.3043478261em; /* 15/23 30/23 */
     font-size: 1.4375em; /* 23/16 */
     text-decoration: none;
@@ -227,9 +243,9 @@ small {
 
 .btn--small,
 .header-stuck .signup-button {
-    height: 44px;
-    line-height: 44px;
-	padding: 0 10px;
+    height: 3.1428571429em; /* 44/14 */
+    line-height: 3.1428571429em;
+	padding: 0 0.7142857143em; /* 10/14 */
     font-size: 0.875em;
 }
 
@@ -253,7 +269,7 @@ small {
 
 .header {
     width: 100%;
-    height: 70px;
+    height: 4.375em;
     position: absolute;
     top: 0;
     left: 0;
@@ -276,7 +292,7 @@ small {
 	position: fixed;
     background: #3377ff;
     opacity: 0;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0.3125em 0.625em rgba(0,0,0,0.1); /* 0 5/16 10/16 */
     animation: showHeader 375ms ease forwards;
 }
 
@@ -286,11 +302,12 @@ small {
 }
 
 .about {
-	padding-top: 300px;
+	padding-top: 18.75em; /* 300/16 */
 }
 
 .hero {
-	padding-top: 70px;
+	padding-top: 4.375em; /* 70/16 */
+	padding-bottom: 4.375em; /* 70/16 */
     position: relative;
 }
 
@@ -300,16 +317,17 @@ small {
 }
 
 .hero__window {
-    width: 550px;
-    height: 369px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    display: none;
+    width: 34.375em; /* 550/16 */
+    height: 23.0625em; /* 369/16 */
+    box-shadow: 0 0.625em 1.25em rgba(0,0,0,0.25);
 }
 
 .hero__bg {
 	position: absolute;
-    bottom: 50px;
+    bottom: 3.125em;
     left: 0;
-    top: -140px;
+    top: -8.75em;
     right: 0;
     z-index: 10;
     transform: skewY(-7deg);
@@ -321,26 +339,27 @@ small {
     bottom: 0;
     left: 0;
     width: 60%;
-    height: 150px;
+    height: 9.375em;
     background: linear-gradient(-45deg, rgba(0,0,0,0.025) 0%, rgba(0,0,0,0.05) 100%);
 }
 
 .hero__bar {
-	width: 100px;
+	width: 6.25em;
     position: absolute;
     bottom: 0;
     right: 0;
     top: 50%;
+    opacity: 0.25;
 }
 
 .hero__bar:nth-child(1) {
     top: 75%;
-    right: 200px;
+    right: 12.5em;
 }
 
 .hero__bar:nth-child(2) {
     top: 50%;
-    right: 100px;
+    right: 6.25em;
 }
 
 .hero__bar:nth-child(3) {
@@ -349,42 +368,38 @@ small {
 
 .section.signup {
     display: flex;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 4.375em);
     align-items: center;
 	background: #f9f9f9;
 }
 
 .pricing__lists {
-	margin-left: -60px;
-    margin-bottom: 30px;
+	margin-left: -3.75em;
+    margin-bottom: 1.875em;
 }
 
 .pricing__lists ul {
-    margin-left: 60px;	
+    margin-left: 3.75em;	
 }
 
 .hero__paragraph {
-	margin-bottom: 30px;
+	margin-bottom: 1.875em;
 }
 
 .hero__content {
-	padding-top: 5em; /* 80/16 */
-	padding-bottom: 5em; /* 80/16 */
+	padding-top: 2.5em; /* 80/16 */
+	padding-bottom: 2.5em; /* 80/16 */
 }
 
 .section {
-	padding-top: 3.75em;
-    padding-bottom: 3.75em;
+	padding-top: 1.875em;
+    padding-bottom: 1.875em;
 }
 
 .section__header {
     margin: 0 auto;
-    max-width: 800px;
-	margin-bottom: 40px;
-}
-
-.hero__blurb {
-	max-width: 25em; /* 400/16 */
+    max-width: 50em;
+	margin-bottom: 2.5em;
 }
 
 .logo {
@@ -395,9 +410,9 @@ small {
     white-space: nowrap;
     text-indent: -100%;
     overflow: hidden;
-    width: 164px;
-    height: 30px;
-    background-size: 164px;
+    width: 10.25em;
+    height: 1.875em;
+    background-size: 10.25em;
     background-image: url("../images/logo-full.png");
     background-repeat: no-repeat;
 }
@@ -413,11 +428,6 @@ small {
     color: #666;
 }
 
-.nav__link.signup-button {
-	border: 1px solid rgba(255,255,255,0.25);
-    border-radius: 4px;
-}
-
 .container {
 	padding: 0 0.625em;
     margin: 0 auto;
@@ -425,12 +435,12 @@ small {
 }
 
 .profile {
-    margin-bottom: 40px;
+    margin-bottom: 2.5em;
 }
 
 .profile__avatar {
-    width: 150px;
-	margin-bottom: 20px;
+    width: 9.375em;
+	margin-bottom: 1.25em;
 }
 
 .info-wrap > div:nth-child(4) .info { margin-bottom: 0; }
@@ -438,88 +448,69 @@ small {
 .info-wrap > div:nth-child(6) .info { margin-bottom: 0; }
 
 .info {
-    margin-bottom: 40px;
+    margin-bottom: 2.5em;
 }
 
 .info__icon {
-	width: 72px;
-    height: 72px;
-    line-height: 72px;
+	width: 4.5em; /* 72/16 */
+    height: 4.5em;
+    line-height: 4.5em;
     text-align: center;
     border-radius: 50%;
-    margin-bottom: 10px;
-    color: #fff;
-    background: var(--secondaryBlue);
+    margin-bottom: 0.625em;
+    color: var(--primaryBlue);
+    border: 0.0625em solid;
 }
 
 .info__icon i {
-	font-size: 32px;
-    line-height: 72px;
+	font-size: 2em; /* 32/16 */
+    line-height: 2.25em; /* 72/32 */
 }
 
 .footer {
-	padding: 20px 0;
+	padding: 1.25em 0;
 }
 
-/* ////////// */
-/* Styleguide */
-/* ////////// */
+/* ///////////// */
+/* iPad Portrait */
+/* ///////////// */
 
-.sg-header {
-	padding: 20px 0;
-    margin-bottom: 20px;
-    color: #fff;
+@media(min-width: 48em ) {
+
+    .hidden-mobile { display: block !important; }
+
+    .signup-button {
+        display: inline-block;
+    }
+
+    .hero__content {
+        padding-top: 5em;
+        padding-bottom: 5em;
+    }
+
+    .hero__blurb {
+        max-width: 25em; /* 400/16 */
+    }
+
+    .hero__window {
+        display: block;
+    }
+
+    .section {
+        padding-top: 3.75em;
+        padding-bottom: 3.75em;
+    }
+
 }
 
-.sg-logo {
-	width: 40px;
-    margin-right: 10px;
-}
+/* /////// */
+/* Desktop */
+/* /////// */
 
-.sg-palette {
-	display: flex;
-}
+@media(min-width: 64em ) {
 
-.sg-palette__color {	
-	width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
+    body {
+        font-size: 16px;
+    }
 
-.sg-heading {
-	margin-bottom: 30px;
 }
-
-.sg-title {
-	border-bottom: 5px solid #eee;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-.sg-spacing {
-	display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.sg-spacing__square {
-	width: 40px;
-}
-
-.sg-spacing__box {
-	margin-right: 10px;
-}
-
-.sg-spacing__box.one {
-    width: 10px;
-    height: 10px;
-    border: 1px dashed #999;
-}
-
-.sg-spacing__box.two {
-    width: 20px;
-    height: 20px;
-    border: 1px dashed #999;
-}
-

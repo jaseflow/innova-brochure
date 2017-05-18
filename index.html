@@ -3,48 +3,25 @@
 <head>
 	<meta charset="UTF-8">
 	<title>InnovaReviews</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/innova.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <script src="https://use.fontawesome.com/5a7ee919b2.js"></script>
 </head>
 <body>
-    <div class="innova-bg" id="innova-bg"></div>
-    <div class="innova">
-        <header class="innova__header" id="innova-open">
-            <div class="innova__closed-copy">
-                <div class="innova__stars">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                </div>
-                <h2 class="innova__reviews">202 reviews</h2>
-            </div>
-            <div class="innova__opened-copy">
-                <h2>Innova ratings and reviews</h2>
-                <div class="innova__close" id="innova-close">
-                    <i class="fa fa-minus"></i>
-                </div>
-            </div>
-        </header>
-        <div class="innova__body">
-            <h3>Reviews</h3>
-            <p>Adipisicing velit nisi eveniet ab nulla qui Culpa enim nihil beatae reprehenderit repellat officiis! Minus eius saepe dolorum ullam ab ipsum? Corrupti sequi est cupiditate impedit nemo Quia fugiat accusamus.</p>
-            <p>Adipisicing velit nisi eveniet ab nulla qui Culpa enim nihil beatae reprehenderit repellat officiis! Minus eius saepe dolorum ullam ab ipsum? Corrupti sequi est cupiditate impedit nemo Quia fugiat accusamus.</p>
-        </div>
-    </div>
     <section class="hero">
         <header class="header flex flex--aligned" id="header">
             <div class="container flex flex--aligned flex--spaced flex__full">
                 <a href="#" class="logo">InnovaReviews</a>
-                <nav class="flex nav">
-                    <a href="#about" class="nav__link">About</a>
-                    <a href="#pricing" class="nav__link">Pricing</a>
-                    <a href="https://www.innovareviews.com/admins/login" class="nav__link">Sign in</a>
+                <div class="flex flex--aligned">
+                    <nav class="hidden-mobile flex nav">
+                        <a href="#about" class="nav__link">About</a>
+                        <a href="#pricing" class="nav__link">Pricing</a>
+                        <a href="https://www.innovareviews.com/admins/login" class="nav__link">Sign in</a>
+                    </nav>
                     <a href="#signup" class="nav__link signup-button">Create account</a>
-                </nav>
+                </div>
             </div>
         </header>    
         <div class="hero__bg">
@@ -147,18 +124,18 @@
                     <p style="padding-left: 10px">USD Per month, <br> free 30 day trial</p>
                 </div>
                 <h3>Includes all of these great features</h3>
-                <div class="flex pricing__lists">
+                <div class="pricing__lists">
                     <ul>
-                        <li>Easy to install & set up</li>
                         <li>Control the reviews you display</li>
                         <li>Customisable review tab</li>
                         <li>Publish unlimited reviews</li>
+                        <li>Import existing reviews</li>
                     </ul>
-                    <ul>
+                    <ul class="hidden-mobile">
+                        <li>Easy to install &amp; set up</li>
                         <li>Beautiful review window</li>
                         <li>Mobile friendly</li>
                         <li>Assisted review collection</li>
-                        <li>Import existing reviews</li>
                     </ul>
                 </div>
                 <p><a href="#" class="btn">Create account</a></p>
@@ -242,7 +219,9 @@
         <div class="container">
             <div class="flex flex--stacked flex--aligned flex--centered">
                 <nav class="flex nav">
-                    <a href="#" class="nav__link nav__link--dark">Home</a>
+                    <a href="#" class="nav__link nav__link--dark">
+                        <i class="fa fa-home"></i>
+                    </a>
                     <a href="#" class="nav__link nav__link--dark">About us</a>
                     <a href="#" class="nav__link nav__link--dark">Terms</a>
                     <a href="#" class="nav__link nav__link--dark">Privacy</a>
@@ -251,14 +230,33 @@
             </div>
         </div>
     </footer>
+    <div class="innova-bg" id="innova-bg"></div>
+    <div class="innova">
+        <header class="innova__header" id="innova-open">
+            <div class="innova__closed-copy">
+                <div class="innova__stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <h2 class="innova__reviews">202 reviews</h2>
+            </div>
+            <div class="innova__opened-copy">
+                <h2>Innova ratings and reviews</h2>
+                <div class="innova__close" id="innova-close">
+                    <i class="fa fa-minus"></i>
+                </div>
+            </div>
+        </header>
+        <div class="innova__body">
+            <h3>Reviews</h3>
+            <p>Adipisicing velit nisi eveniet ab nulla qui Culpa enim nihil beatae reprehenderit repellat officiis! Minus eius saepe dolorum ullam ab ipsum? Corrupti sequi est cupiditate impedit nemo Quia fugiat accusamus.</p>
+            <p>Adipisicing velit nisi eveniet ab nulla qui Culpa enim nihil beatae reprehenderit repellat officiis! Minus eius saepe dolorum ullam ab ipsum? Corrupti sequi est cupiditate impedit nemo Quia fugiat accusamus.</p>
+        </div>
+    </div>
     <script>
-        window.addEventListener("scroll", function(event) {
-            if(window.scrollY >= 500) {
-                document.querySelector("body").classList.add("header-stuck");
-            } else {
-                document.querySelector("body").classList.remove("header-stuck");
-            }
-        });
         document.querySelector("#innova-open").addEventListener("click", function() {
             document.querySelector('body').classList.add('innova-open');
         });
@@ -267,6 +265,15 @@
         });
         document.querySelector("#innova-close").addEventListener("click", function() {
             document.querySelector('body').classList.remove('innova-open');
+        });
+    </script>
+    <script>
+        window.addEventListener("scroll", function(event) {
+            if(window.scrollY >= 500) {
+                document.querySelector("body").classList.add("header-stuck");
+            } else {
+                document.querySelector("body").classList.remove("header-stuck");
+            }
         });
     </script>
 </body>

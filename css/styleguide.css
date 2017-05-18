@@ -1,0 +1,58 @@
+.sg-header {
+	padding: 20px 0;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.sg-logo {
+	width: 40px;
+    margin-right: 10px;
+}
+
+.sg-palette {
+	display: flex;
+}
+
+.sg-palette__color {	
+	width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.sg-heading {
+	margin-bottom: 30px;
+}
+
+.sg-title {
+	border-bottom: 5px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.sg-spacing {
+	display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.sg-spacing__square {
+	width: 40px;
+}
+
+.sg-spacing__box {
+	margin-right: 10px;
+}
+
+.sg-spacing__box.one {
+    width: 10px;
+    height: 10px;
+    border: 1px dashed #999;
+}
+
+.sg-spacing__box.two {
+    width: 20px;
+    height: 20px;
+    border: 1px dashed #999;
+}
+
