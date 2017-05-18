@@ -505,6 +505,10 @@ small {
         display: inline-block;
     }
 
+    .pricing__lists {
+        display: flex;
+    }
+
     .hero__content {
         padding-top: 5em;
         padding-bottom: 5em;
