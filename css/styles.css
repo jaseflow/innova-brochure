@@ -509,6 +509,10 @@ small {
         display: flex;
     }
 
+    .hero {
+        padding-bottom: 0;
+    }
+
     .hero__content {
         padding-top: 5em;
         padding-bottom: 5em;
@@ -525,6 +529,10 @@ small {
     .section {
         padding-top: 3.75em;
         padding-bottom: 3.75em;
+    }
+
+    .about {
+        padding-top: 3.125em;
     }
 
 }
