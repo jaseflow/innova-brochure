@@ -551,6 +551,10 @@ small {
 
 @media(max-width: 64em) {
 
+    .hero__content {
+        text-align: center;
+    }
+
     .info-grid {
         display: block;
         white-space: nowrap;
