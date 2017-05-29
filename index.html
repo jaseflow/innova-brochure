@@ -5,9 +5,7 @@
 	<title>InnovaReviews</title>
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/innova.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-    <script src="https://use.fontawesome.com/5a7ee919b2.js"></script>
 </head>
 <body>
     <section class="hero">
@@ -43,7 +41,7 @@
                         <div id="benefits"></div>
                     </div>
                     <div class="hero__window secondary-bg">
-                        <img src="images/hero-window.png" alt="">
+                        <img src="images/heroguy.png" alt="">
                     </div>
                 </div>
             </div>
@@ -190,28 +188,30 @@
     </section>
     <section class="section signup">
         <div class="container">
-            <header class="section__header">
-                <div class="text-centered">
-                    <h1>Ready to get started?</h1>
-                    <p class="h3">Try every feature free for 30 days, no credit card required</p>
+            <div id="subbed" class="subbed">
+                <header class="section__header">
+                    <div class="text-centered">
+                        <h1>Thanks for signing up</h1>
+                        <p class="h3">We'll be in touch with you shortly!</p>
+                    </div>
+                </header>
+            </div>
+            <div id="unsubbed" class="unsubbed">
+                <header class="section__header">
+                    <div class="text-centered">
+                        <h1>The newer, more awesome Innova launching soon!</h1>
+                        <p class="h3">Sign up here to be among the first to know when it's ready - we'll give you wonderful people a little promo code so you can have Innova at a special discount for being a cool early adopter.</p>
+                    </div>
+                </header>
+                <div class="flex flex--centered">
+                    <form action="" class="flex flex--aligned" id="subscribeForm">
+                        <div class="form__group form__group--inline">
+                            <label for="email">Email address</label>
+                            <input type="email" required placeholder="example@address.com" name="email" class="input">
+                        </div>
+                        <button type="submit" class="btn btn--small btn--block">Sign up</button>
+                    </form>
                 </div>
-            </header>
-            <div class="flex flex--centered">
-                <form action="">
-                    <div class="form__group">
-                        <label for="email">Email address</label>
-                        <input type="email" name="email" class="input">
-                    </div>
-                    <div class="form__group">
-                        <label for="password">Password</label>
-                        <input type="password" name="password" class="input">
-                    </div>
-                    <div class="form__group">
-                        <label for="confirm">Repeat Password</label>
-                        <input type="password" name="confirm" class="input">
-                    </div>
-                    <button type="submit" class="btn btn--block">Create account</button>
-                </form>
             </div>
         </div>
     </section>
@@ -230,45 +230,12 @@
             </div>
         </div>
     </footer>
-    <div class="innova-bg" id="innova-bg"></div>
-    <div class="innova">
-        <header class="innova__header" id="innova-open">
-            <div class="innova__closed-copy">
-                <div class="innova__stars">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                </div>
-                <h2 class="innova__reviews">202 reviews</h2>
-            </div>
-            <div class="innova__opened-copy">
-                <h2>Innova ratings and reviews</h2>
-                <div class="innova__close" id="innova-close">
-                    <i class="fa fa-minus"></i>
-                </div>
-            </div>
-        </header>
-        <div class="innova__body">
-            <h3>Reviews</h3>
-            <p>Adipisicing velit nisi eveniet ab nulla qui Culpa enim nihil beatae reprehenderit repellat officiis! Minus eius saepe dolorum ullam ab ipsum? Corrupti sequi est cupiditate impedit nemo Quia fugiat accusamus.</p>
-            <p>Adipisicing velit nisi eveniet ab nulla qui Culpa enim nihil beatae reprehenderit repellat officiis! Minus eius saepe dolorum ullam ab ipsum? Corrupti sequi est cupiditate impedit nemo Quia fugiat accusamus.</p>
-        </div>
-    </div>
+    <script src="https://use.fontawesome.com/5a7ee919b2.js"></script>
     <script>
-        document.querySelector("#innova-open").addEventListener("click", function() {
-            document.querySelector('body').classList.add('innova-open');
-        });
-        document.querySelector("#innova-bg").addEventListener("click", function() {
-            document.querySelector('body').classList.remove('innova-open');
-        });
-        document.querySelector("#innova-close").addEventListener("click", function() {
-            document.querySelector('body').classList.remove('innova-open');
-        });
-    </script>
-    <script>
-        var signUpBox = document.querySelector("#signup");
+        var signUpBox = document.getElementById("signup"),
+            subForm = document.getElementById("subscribeForm"),
+            subbed = document.getElementById("subbed"),
+            unsubbed = document.getElementById("unsubbed");
         window.addEventListener("scroll", function(event) {
             if(window.scrollY >= 500) {
                 document.querySelector("body").classList.add("header-stuck");
@@ -280,6 +247,11 @@
             } else {
                 document.querySelector("body").classList.remove("signing-up");
             }
+        });
+        subForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            subbed.setAttribute("style", "display: block !important");
+            unsubbed.setAttribute("style", "display: none !important");
         });
     </script>
 </body>
