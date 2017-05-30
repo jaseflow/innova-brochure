@@ -359,7 +359,7 @@ small {
     height: 100%;
     display: flex;
     align-items: center;
-    transition: transform 375ms 375ms ease;
+    transition: transform 375ms ease;
 }
 
 .when-opened {
