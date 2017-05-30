@@ -20,7 +20,7 @@
                         <a href="#pricing" class="nav__link">Pricing</a>
                         <a href="https://www.innovareviews.com/admins/login" class="nav__link">Sign in</a>
                     </nav>
-                    <a href="#signup" class="nav__link signup-button">Create account</a>
+                    <a href="#signup" class="nav__link signup-button js-cta">Create account</a>
                 </div>
             </div>
         </header>    
@@ -38,7 +38,7 @@
                     <div class="hero__blurb flex__full">
                         <h1>Build trust with new customers and grow your business</h1>
                         <p class="h3 hero__paragraph">Customer reviews encourage new clients and help your business grow. We make collecting & publishing customer reviews easy.</p>
-                        <p><a href="#signup" class="btn">Create account</a></p>
+                        <p><a href="#signup" class="btn js-cta">Create account</a></p>
                         <small>Grow your business now, 30 day free trial.</small>
                         <div id="benefits"></div>
                     </div>
@@ -384,7 +384,7 @@
                     <form action="" class="flex flex--aligned" id="subscribeForm">
                         <div class="form__group form__group--inline">
                             <label for="email">Email address</label>
-                            <input type="email" required placeholder="example@address.com" name="email" class="input">
+                            <input type="email" required autofocus placeholder="example@address.com" name="email" class="input" id="email-input">
                         </div>
                         <button type="submit" class="btn btn--small btn--block">Sign up</button>
                     </form>
@@ -412,7 +412,16 @@
         var signUpBox = document.getElementById("signup"),
             subForm = document.getElementById("subscribeForm"),
             subbed = document.getElementById("subbed"),
-            unsubbed = document.getElementById("unsubbed");
+            unsubbed = document.getElementById("unsubbed"),
+            ctas = document.querySelectorAll(".js-cta")
+            emailInput = document.getElementById("email-input");
+        ctas.forEach(function(el) {
+            el.addEventListener("click", function(e) {
+                setTimeout(function() {
+                    emailInput.focus();
+                });
+            });
+        });
         window.addEventListener("scroll", function(event) {
             if(window.scrollY >= 500) {
                 document.querySelector("body").classList.add("header-stuck");
