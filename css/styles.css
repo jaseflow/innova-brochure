@@ -359,20 +359,23 @@ small {
     transition: all 375ms 150ms ease;
 }
 
-@keyframes popUp {
+@keyframes pulse {
     0% {
-        transform: translateY(0);
+        box-shadow: 0 0 0 0 rgba(17, 148, 246, 0);
     }
-    50% {
-        transform: translateY(-10px);
+    40% {
+        box-shadow: 0 0 0 20px rgba(17, 148, 246, 0.5);
+    }
+    80% {
+        box-shadow: 0 0 0 20px rgba(17, 148, 246, 0.5);
     }
     100% {
-        transform: translateY(0);
+        box-shadow: 0 0 0 0 rgba(17, 148, 246, 0);
     }
 }
 
-.showcase__desktop:hover .tab-eg {
-    animation: popUp 1s 375ms ease;
+.showcase__desktop.pulse .tab-eg__header {
+    animation: pulse 1s 375ms ease;
 }
 
 .tab-eg__header {
