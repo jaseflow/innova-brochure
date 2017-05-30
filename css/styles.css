@@ -307,15 +307,8 @@ small {
 }
 
 .device--iphone {
-	padding: 1.25em;
+	padding: 0.625em;
     padding-bottom: 2.5em;
-}
-
-.device--iphone .device__bg {
-    top: 3em;
-    left: 1.25em;
-    right: 1.25em;
-    bottom: 4em;
 }
 
 .device--iphone:before {
@@ -334,6 +327,13 @@ small {
     background-color: #fff;
     border: 1px solid #eee;
     border-radius: 4px;
+}
+
+.device--iphone .device__bg {
+    top: 3em;
+    left: 0.625em;
+    right: 0.625em;
+    bottom: 4em;
 }
 
 .device__img {
