@@ -289,7 +289,7 @@ small {
     box-shadow: 0 10px 20px rgba(0,0,0,0.25);
     border-radius: 1.25em;
     background: #fff;
-    background: linear-gradient(-180deg, #FFFFFF 81%, rgba(243,243,243,0.74) 93%, rgba(236,236,236,0.09) 100%);
+    background: linear-gradient(-180deg, #FFFFFF 81%, rgba(243,243,243,0.74) 93%, rgba(168,212,213,0.09) 100%);
     position: relative;
 }
 
@@ -305,12 +305,13 @@ small {
 .device__bg {
     overflow: hidden;
 	position: absolute;
-    top: 3.125em;
-    left: 3.125em;
-    right: 3.125em;
-    bottom: 3.125em;
+    top: 2.5em;
+    left: 2.5em;
+    right: 2.5em;
+    bottom: 2.5em;
     background-size: cover;
     background-position: center;
+    border: 1px solid #ddd;
     box-shadow: inset 0 2px 2px rgba(0,0,0,0.25);
 }
 
