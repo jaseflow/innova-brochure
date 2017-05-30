@@ -316,7 +316,6 @@ small {
     left: 1.25em;
     right: 1.25em;
     bottom: 4em;
-    border-radius: 5px;
 }
 
 .device--iphone:before {
@@ -334,7 +333,7 @@ small {
     background-position: center;
     background-color: #fff;
     border: 1px solid #eee;
-    border-radius: 10px;
+    border-radius: 4px;
 }
 
 .device__img {
@@ -488,7 +487,7 @@ small {
 }
 
 .showcase__mobile {
-    width: 280px;
+    width: 270px;
 }
 
 .app {
