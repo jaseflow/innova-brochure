@@ -359,6 +359,10 @@ small {
     transition: all 375ms 150ms ease;
 }
 
+.showcase__desktop:hover .tab-eg {
+    transform: translateY(-10px);
+}
+
 .tab-eg__header {
 	height: 50px;
     padding: 0 20px;
@@ -367,10 +371,12 @@ small {
     font-weight: 700;
     color: #fff;
     background: #1194F6;
+    text-decoration: none;
     border-radius: 4px 4px 0 0;
     font-size: 14px;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .when-opened,
@@ -447,24 +453,24 @@ small {
 	font-size: 16px;
 }
 
-.showcase__desktop:hover .tab-eg {
+.showcase__desktop.open .tab-eg {
     width: 380px;	
     transform: translateY(-300px);
 }
 
-.showcase__desktop:hover .tab-bg {
+.showcase__desktop.open .tab-bg {
 	opacity: 0.5;
 }
 
-.showcase__desktop:hover .tab-eg__content {
+.showcase__desktop.open .tab-eg__content {
     opacity: 1;
 }
 
-.showcase__desktop:hover .when-opened {
+.showcase__desktop.open .when-opened {
     transform: translateY(0);
 }
 
-.showcase__desktop:hover .when-closed {
+.showcase__desktop.open .when-closed {
     transform: translateY(100%);
 }
 

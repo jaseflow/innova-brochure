@@ -115,13 +115,13 @@
                     </div>
                 </section>
                 <div class="showcase">
-                    <div class="showcase__desktop">
+                    <div class="showcase__desktop" id="showcase-desktop">
                         <div class="device device--ipad">
                             <div class="device__bg">
                                 <img src="https://files.slack.com/files-pri/T03B7JR75-F5KKZDXN0/product-fake-website.png" alt="" class="device__screen">
                                 <div class="tab-bg"></div>
                                 <div class="tab-eg">
-                                    <div class="tab-eg__header">
+                                    <div class="tab-eg__header" id="tab-header">
                                         <div class="when-closed">
                                             <div class="tab-eg__stars">
                                                 <i class="fa fa-star"></i>
@@ -417,7 +417,9 @@
             subForm = document.getElementById("subscribeForm"),
             subbed = document.getElementById("subbed"),
             unsubbed = document.getElementById("unsubbed"),
-            ctas = document.querySelectorAll(".js-cta")
+            ctas = document.querySelectorAll(".js-cta"),
+            tabHeader = document.getElementById("tab-header"),
+            showcaseDesktop = document.getElementById("showcase-desktop"),
             emailInput = document.getElementById("email-input");
         ctas.forEach(function(el) {
             el.addEventListener("click", function(e) {
@@ -442,6 +444,9 @@
             event.preventDefault();
             subbed.setAttribute("style", "display: block !important");
             unsubbed.setAttribute("style", "display: none !important");
+        });
+        tabHeader.addEventListener("click", function(event) {
+            showcaseDesktop.classList.toggle("open");
         });
     </script>
 </body>
