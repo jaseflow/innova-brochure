@@ -293,6 +293,7 @@ small {
     box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     border-radius: 3.125em;
     background: #fff;
+    background: linear-gradient(-180deg, #FFFFFF 74%, rgba(243,243,243,0.74) 90%, rgba(129,195,196,0.09) 100%);
     position: relative;
 }
 
