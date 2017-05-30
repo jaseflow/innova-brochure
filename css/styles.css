@@ -290,7 +290,7 @@ small {
 
 .device {
 	background: #fff;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     border-radius: 3.125em;
     background: #fff;
     position: relative;
@@ -470,13 +470,16 @@ small {
 
 .showcase {
 	position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
 }
 
 .showcase__desktop {
-	width: 70%;
-    margin-left: 30%;
+	width: calc(100% - 300px);
     position: relative;
     border-radius: 10px;
+    margin-left: 20px;
 }
 
 .showcase__desktop img {
@@ -484,10 +487,7 @@ small {
 }
 
 .showcase__mobile {
-    position: absolute;
-    top: 20px;
-    left: 0;
-    width: 28%;
+    width: 280px;
 }
 
 .app {
