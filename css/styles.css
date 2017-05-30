@@ -359,8 +359,20 @@ small {
     transition: all 375ms 150ms ease;
 }
 
+@keyframes popUp {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .showcase__desktop:hover .tab-eg {
-    transform: translateY(-10px);
+    animation: popUp 1s 375ms ease;
 }
 
 .tab-eg__header {
