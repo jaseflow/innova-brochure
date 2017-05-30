@@ -361,21 +361,25 @@ small {
 
 @keyframes pulse {
     0% {
-        box-shadow: 0 0 0 0 rgba(17, 148, 246, 0);
+        box-shadow: 0 0 0 0 rgba(17, 148, 246, 0.7), 0 0 0 0 rgba(17, 148, 246, 0.7);
     }
     40% {
-        box-shadow: 0 0 0 15px rgba(17, 148, 246, 0.5);
+        box-shadow: 0 0 0 15px rgba(17, 148, 246, 0), 0 0 0 0 rgba(17, 148, 246, 0.7);
     }
     80% {
-        box-shadow: 0 0 0 15px rgba(17, 148, 246, 0.5);
+        box-shadow: 0 0 0 15px rgba(17, 148, 246, 0), 0 0 0 0 rgba(17, 148, 246, 0);
     }
     100% {
-        box-shadow: 0 0 0 0 rgba(17, 148, 246, 0);
+        box-shadow: 0 0 0 0 rgba(17, 148, 246, 0), 0 0 0 0 rgba(17, 148, 246, 0);
     }
 }
 
-.showcase__desktop.pulse .tab-eg__header {
-    animation: pulse 1s 375ms ease;
+.tab-eg__header {
+    animation: pulse 5s ease infinite;
+}
+
+.showcase__desktop.open .tab-eg__header {
+	animation: none;
 }
 
 .tab-eg__header {

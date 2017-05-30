@@ -422,7 +422,6 @@
             unsubbed = document.getElementById("unsubbed"),
             ctas = document.querySelectorAll(".js-cta"),
             tabHeader = document.getElementById("tab-header"),
-            showcaseDesktop = document.getElementById("showcase-desktop"),
             emailInput = document.getElementById("email-input");
         ctas.forEach(function(el) {
             el.addEventListener("click", function(e) {
@@ -431,20 +430,7 @@
                 });
             });
         });
-        function isScrolledIntoView(el) {
-            var elemTop = el.getBoundingClientRect().top;
-            var elemBottom = el.getBoundingClientRect().bottom;
-
-            var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
-            return isVisible;
-        }
         window.addEventListener("scroll", function(event) {
-            if(isScrolledIntoView(showcaseDesktop)) {
-                showcaseDesktop.classList.add("pulse");
-            };
-            if(!isScrolledIntoView(showcaseDesktop)) {
-                showcaseDesktop.classList.remove("pulse");
-            };
             if(window.scrollY >= 500) {
                 document.querySelector("body").classList.add("header-stuck");
             } else {
