@@ -270,6 +270,11 @@ small {
     width: 100%;
 }
 
+.btn--simple {
+	background: #fefefe;
+    color: #666;
+}
+
 /* ///////////// */
 /* Patterns */
 /* ///////////// */
@@ -285,11 +290,9 @@ small {
 
 .device {
 	background: #fff;
-    padding: 2.5em;
     box-shadow: 0 10px 20px rgba(0,0,0,0.25);
-    border-radius: 1.25em;
+    border-radius: 3.125em;
     background: #fff;
-    background: linear-gradient(-180deg, #FFFFFF 81%, rgba(243,243,243,0.74) 93%, rgba(168,212,213,0.09) 100%);
     position: relative;
 }
 
@@ -302,6 +305,23 @@ small {
     padding-top: 75%;
 }
 
+.device--iphone {
+	padding: 1.25em;
+    padding-bottom: 2.5em;
+}
+
+.device--iphone .device__bg {
+    top: 3em;
+    left: 1.25em;
+    right: 1.25em;
+    bottom: 3em;
+    border-radius: 5px;
+}
+
+.device--iphone:before {
+    padding-top: 177.7777777%;
+}
+
 .device__bg {
     overflow: hidden;
 	position: absolute;
@@ -311,8 +331,9 @@ small {
     bottom: 2.5em;
     background-size: cover;
     background-position: center;
-    border: 1px solid #ddd;
-    box-shadow: inset 0 2px 2px rgba(0,0,0,0.25);
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
 }
 
 .device__img {
@@ -333,7 +354,7 @@ small {
     width: 220px;
     position: absolute;
     top: calc(100% - 50px);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.25);
     right: 20px;
     transition: all 375ms 150ms ease;
 }
@@ -379,7 +400,7 @@ small {
 .tab-eg__body {
 	height: 300px;
     padding: 20px;
-    overflow-y: auto;
+    overflow: hidden;
     background: #fff;
     font-size: 13px;
 }
@@ -397,6 +418,7 @@ small {
     top: 0;
     background: #000;
     opacity: 0;
+    transform: translateZ(0);
     transition: opacity 250ms ease;
 }
 
@@ -425,24 +447,24 @@ small {
 	font-size: 16px;
 }
 
-.device:hover .tab-eg {
+.showcase__desktop:hover .tab-eg {
     width: 380px;	
     transform: translateY(-300px);
 }
 
-.device:hover .tab-bg {
+.showcase__desktop:hover .tab-bg {
 	opacity: 0.5;
 }
 
-.device:hover .tab-eg__content {
+.showcase__desktop:hover .tab-eg__content {
     opacity: 1;
 }
 
-.device:hover .when-opened {
+.showcase__desktop:hover .when-opened {
     transform: translateY(0);
 }
 
-.device:hover .when-closed {
+.showcase__desktop:hover .when-closed {
     transform: translateY(100%);
 }
 
@@ -450,8 +472,162 @@ small {
 	position: relative;
 }
 
-.showcase__ipad {
+.showcase__desktop {
 	width: 80%;
+    margin-left: 20%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.showcase__desktop img {
+	display: block;
+}
+
+.showcase__mobile {
+    position: absolute;
+    top: 20px;
+    left: -80px;
+    width: 320px;
+}
+
+.app {
+	position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.app__header {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 0 20px;
+    position: relative;
+}
+
+.app__bg {
+	position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 375ms ease;
+    background: #000;
+    z-index: 20;
+}
+
+.showcase__mobile:hover .app__bg {
+	transform: translateX(-100%);
+    opacity: 0.5;
+}
+
+.app__nav {
+	position: absolute;
+    left: 0;
+    top: 0;
+    height: 50px !important;
+    width: 50px !important;
+    line-height: 50px !important;
+    text-align: center;
+}
+
+.app__menu {
+    position: absolute;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    padding-top: 20px;
+    padding-left: 60px;
+    height: 100%;
+    z-index: 50;
+    background: rgb(243, 243, 243);
+    transition: transform 375ms ease;
+}
+
+.app__menu-icon {
+	margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px !important;
+    margin-top: -20px;
+    margin-left: -20px;
+}
+
+.app__content {
+	font-size: 13px;
+}
+
+.app-review {
+	padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.app-review__stars {
+    color: #FFB600;
+    margin-bottom: 10px;
+}
+
+.app-review__actions {
+	display: flex;
+    margin-left: -10px;
+    padding-top: 10px;
+}
+
+.app-review__actions .btn {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.app__alert {
+    background: var(--primaryGreen);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.showcase__mobile:hover .app__menu {
+	transform: translateX(calc(100% - 40px));
+}
+
+.app-nav {
+	font-size: 12px;
+}
+
+.app-nav ul {
+	list-style: none;
+}
+
+.app-nav li {
+	position: relative;
+    padding-left: 15px;
+    color: #777;
+    height: 36px;
+    line-height: 36px;
+}
+
+.app-nav li:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    left: 0;
+    top: 15px;
+    border-radius: 50%;
+    background: #ccc;
+}
+
+.app-nav__notification {
+    color: red;
+    font-weight: 600;
 }
 
 @keyframes showHeader {
@@ -568,6 +744,11 @@ small {
 	background: #f9f9f9;
 }
 
+.section--showcase {
+	margin-top: 3.75em;
+    border-top: 1px solid #eee;
+}
+
 .pricing__lists {
 	margin-left: -3.75em;
     margin-bottom: 1.875em;
@@ -631,6 +812,10 @@ small {
 	padding: 0 0.625em;
     margin: 0 auto;
     max-width: 64em; /* 1024/16 */
+}
+
+.container--large {
+	padding: 0 1.25em;
 }
 
 .profile {
